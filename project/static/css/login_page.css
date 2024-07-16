@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(33, 31, 116, 1);
+}
+
+.v1_2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.v27_3 {
+  width: 100%;
+  max-width: 400px;
+  background: url("../images/v27_3.png") no-repeat center center;
+  background-size: cover;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.v8_10 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  font-style: italic;
+  font-size: 8vw; /* 줄어든 글자 크기 */
+  text-align: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.v21_45 {
+  width: 100%;
+  background: rgba(255, 255, 255, 1);
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.v9_11,
+.v9_12 {
+  width: 100%;
+  max-width: 260px;
+  height: 56px;
+  background: rgba(217, 217, 217, 1);
+  margin-bottom: 20px;
+  padding: 0 10px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.v19_40 {
+  width: 100%;
+  max-width: 260px;
+  height: 56px;
+  background: rgba(33, 31, 116, 1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.v12_23 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.v10_14,
+.v13_34 {
+  width: 100%;
+  max-width: 260px;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.v10_14 {
+  color: black;
+}
+
+.v13_34 {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .v8_10 {
+    font-size: 12vw; /* 점진적으로 줄어드는 글자 크기 */
+  }
+
+  .v21_45 {
+    padding: 10px;
+  }
+
+  .v9_11,
+  .v9_12,
+  .v19_40,
+  .v10_14,
+  .v13_34 {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .v8_10 {
+    font-size: 14vw; /* 더 작은 화면에서 글자 크기 조정 */
+  }
+}

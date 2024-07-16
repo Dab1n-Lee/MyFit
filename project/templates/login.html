@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/login_page.css') }}"
+    />
+    <title>MyFit</title>
+  </head>
+  <body>
+    <div class="v1_2">
+      <div class="v27_3">
+        <span class="v8_10">MyFit</span>
+        <div class="v21_45">
+          <form
+            action="{{ url_for('auth.login') }}"
+            method="post"
+            class="login-form"
+          >
+            <input class="v9_11" name="id" type="text" placeholder="ID" />
+            <input
+              class="v9_12"
+              name="password"
+              type="password"
+              placeholder="Password"
+            />
+            <div class="v19_40">
+              <button type="submit" class="v12_23">LOG IN</button>
+            </div>
+          </form>
+          <span class="v10_14">ID가 없으신가요?</span>
+          <a href="{{ url_for('auth.register') }}" class="v13_34"
+            >회원가입하기</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

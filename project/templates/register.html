@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/css/register_page.css') }}"
+    />
+    <title>회원가입 - MyFit</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <span class="title">회원가입</span>
+        <form method="post" class="register-form">
+          {{ form.hidden_tag() }}
+          <input
+            class="input-field"
+            name="user_id"
+            type="text"
+            placeholder="사용자 ID"
+            value="{{ request.form.user_id or '' }}"
+          />
+          <input
+            class="input-field"
+            name="password"
+            type="password"
+            placeholder="비밀번호"
+            value="{{ request.form.password or '' }}"
+          />
+          <input
+            class="input-field"
+            name="confirm_password"
+            type="password"
+            placeholder="비밀번호 확인"
+            value="{{ request.form.confirm_password or '' }}"
+          />
+          <input
+            class="input-field"
+            name="nickname"
+            type="text"
+            placeholder="이름(닉네임)"
+            value="{{ request.form.nickname or '' }}"
+          />
+          <input
+            class="input-field"
+            name="birthdate"
+            type="text"
+            placeholder="생년월일 (ex) 990120"
+            value="{{ request.form.birthdate or '' }}"
+          />
+          <div class="gender-selection">
+            <label class="gender-label">성별</label>
+            <label
+              ><input type="radio" name="gender" value="0" {{ 'checked' if
+              request.form.gender == '0' else '' }}> 남</label
+            >
+            <label
+              ><input type="radio" name="gender" value="1" {{ 'checked' if
+              request.form.gender == '1' else '' }}> 여</label
+            >
+          </div>
+          <div class="submit-button-container">
+            <button type="submit" class="submit-button">MyFit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

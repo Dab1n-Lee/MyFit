@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>Welcome, {{ nickname }}!</h1>
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+    <br />
+    {% if user_info_exists %}
+    <a href="{{ url_for('auth.view_user_info', user_id=current_user.id) }}"
+      >상세정보 조회</a
+    >
+    {% else %}
+    <a href="{{ url_for('auth.add_user_info', user_id=current_user.id) }}"
+      >상세정보 입력</a
+    >
+    {% endif %}
+  </body>
+</html>

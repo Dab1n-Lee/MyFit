@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>View User Info</title>
+  </head>
+  <body>
+    <h1>User Info for {{ user.nickname }}</h1>
+    {% if user_info %}
+    <p>Name: {{ user_info.name }}</p>
+    <p>Email: {{ user_info.email }}</p>
+    <p>Phone: {{ user_info.phone }}</p>
+    {% else %}
+    <p>No user info available.</p>
+    {% endif %}
+
+    <a href="{{ url_for('auth.logout') }}">Logout</a>
+  </body>
+</html>
