@@ -89,6 +89,14 @@ body {
   color: rgba(255, 255, 255, 1);
   font-weight: bold;
   font-size: 20px;
+  background: rgba(33, 31, 116, 1); /* Added line */
+  border: none; /* Added line */
+  width: 100%; /* Added line */
+  height: 100%; /* Added line */
+  display: flex; /* Added line */
+  justify-content: center; /* Added line */
+  align-items: center; /* Added line */
+  border-radius: 10px; /* Added line */
 }
 
 .v10_14,
