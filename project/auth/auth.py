@@ -5,6 +5,7 @@ from ..utils.models import User, UserInfo
 from ..forms.auth_forms import RegistrationForm
 from project import db
 
+# auth에 해당하는 라우팅 함수들.
 bp = Blueprint('auth', __name__, url_prefix="/")
 
 @bp.route('/register', methods=['GET', 'POST'])
