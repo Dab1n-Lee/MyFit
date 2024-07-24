@@ -1,0 +1,240 @@
+/* Overlay styling */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  z-index: 999; /* Ensure it is above other content */
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.dynamic-box {
+  width: 500px; /* 너비를 20%로 설정 */
+  height: 99%;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  padding: 1rem; /* 여유 공간 추가 */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* 자식 요소들을 수직으로 퍼지게 함 */
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  position: relative; /* 자식 요소의 절대 위치 지정에 필요 */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.dynamic-box .form-group {
+  top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  margin: 5%;
+}
+
+.dynamic-box .form-group input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.dynamic-box .upload-box {
+  background: #d3d3d3;
+  border: 2px dashed #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  height: 180px;
+}
+
+.dynamic-box .upload-box input[type="file"] {
+  display: none; /* 실제 파일 입력 요소를 숨깁니다 */
+}
+
+.dynamic-box .upload-box label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: background 0.3s, border 0.3s;
+  position: relative;
+  margin-top: 15px;
+}
+
+.dynamic-box .upload-box label:hover {
+  background: #0056b3;
+  border-color: #0056b3; /* 호버 시 테두리 색상 변경 */
+}
+
+.dynamic-box .upload-box p {
+  margin: 0;
+}
+
+.dynamic-box .upload-box img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.dynamic-box .upload-box p {
+  display: flex;
+}
+
+.dynamic-box .upload-button {
+  padding: 0.5rem 1rem; /* 여유 공간 추가 */
+  background: #4a4a4a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  top: 290px;
+  right: 20px;
+}
+
+.dynamic-box .upload-details {
+  font-size: 0.9rem;
+  color: #4a4a4a;
+  text-align: center;
+  display: flex;
+  position: relative;
+  top: 325px;
+}
+
+.section-title {
+  position: absolute;
+  top: 85px;
+  left: 40px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.title {
+  top: 20px;
+  position: absolute;
+}
+
+.form-group {
+  position: relative;
+  top: 145px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.dynamic-box .submit-button {
+  position: absolute;
+  bottom: 10px; /* 하단에서의 거리 */
+  right: 10px; /* 오른쪽에서의 거리 */
+  padding: 0.5rem 1rem; /* 여유 공간 추가 */
+  background: #007bff; /* 버튼 색상 */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dynamic-box .close-button:hover {
+  color: rgba(0, 0, 0, 0.7);
+  width: 70px;
+}
+
+.dynamic-box .close-button {
+  width: 70px;
+  align-self: flex-end;
+}
+.dynamic-box .upload-details {
+  bottom: 2px;
+  right: 20px;
+  position: absolute;
+  font-size: 12px;
+  font-weight: lighter;
+  height: 20px;
+}
+
+.dynamic-box .upload-box p {
+  font-size: 12px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group select {
+  margin-top: 0.2rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+}
+
+.sub-title {
+  font-size: 15px;
+  display: flex;
+  position: relative;
+  top: 40px;
+}
+
+.dynamic-box h3 {
+  margin-top: 35px;
+  font-size: 25px;
+}
+
+/* CSS for image gallery */
+.upload-result {
+  margin-top: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
+}
+
+.image-gallery img {
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.upload-result h3 {
+  text-align: center;
+}
+
+.upload-result p {
+  text-align: center;
+}
