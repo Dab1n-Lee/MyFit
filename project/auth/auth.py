@@ -73,7 +73,7 @@ def add_user_info(user_id):
         
         return redirect(url_for('auth.view_user_info', user_id=user_id))
     
-    return render_template('add_user_info.html', user=user)
+    return render_template('index.html', user=user)
 
 @bp.route('/profile/<nickname>')
 @login_required
@@ -81,7 +81,7 @@ def profile(nickname):
     if nickname != current_user.nickname:
         abort(403)
     user_info_exists = UserInfo.query.filter_by(user_id=current_user.id).first() is not None
-    return render_template('profile.html', nickname=nickname, user_info_exists=user_info_exists)
+    return render_template('index.html', nickname=nickname, user_info_exists=user_info_exists)
 
 
 @bp.route('/profile_info/<int:user_id>')
