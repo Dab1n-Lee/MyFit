@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: rgba(33, 31, 116, 1);
+  background: rgba(224, 224, 224, 1);
 }
 
 .v1_2 {
@@ -24,7 +24,7 @@ body {
 
 .v27_3 {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background-size: cover;
   padding: 20px;
   display: flex;
@@ -33,19 +33,21 @@ body {
 }
 
 .v8_10 {
-  color: rgba(255, 255, 255, 1);
-  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
   font-style: italic;
-  font-size: 8vw; /* 줄어든 글자 크기 */
+  font-size: 5vw; /* 줄어든 글자 크기 */
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: -80px;
   white-space: nowrap;
 }
 
 .v21_45 {
   width: 100%;
   background: rgba(255, 255, 255, 1);
-  padding: 20px;
+  padding: 50px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
