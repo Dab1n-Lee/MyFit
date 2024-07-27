@@ -7,40 +7,41 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
+  justify-content: center; /* Overlay를 화면 가운데로 정렬 */
+  align-items: center; /* Overlay를 화면 가운데로 정렬 */
   z-index: 999; /* Ensure it is above other content */
 }
 
 @keyframes slide-in {
   from {
-    transform: translateX(100%);
+      transform: translateX(100%);
   }
   to {
-    transform: translateX(0);
+      transform: translateX(0);
   }
 }
 
 .dynamic-box {
-  width: 500px; /* 너비를 20%로 설정 */
+  width: 500px;
   height: 99%;
+  left:0;
+  position: absolute;
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 2px;
-  padding: 1rem; /* 여유 공간 추가 */
+  margin: 2px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* 자식 요소들을 수직으로 퍼지게 함 */
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.7);
-  position: relative; /* 자식 요소의 절대 위치 지정에 필요 */
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  animation: slide-in 0.3s ease-out;
 }
 
 .dynamic-box .form-group {
-  top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
   display: flex;
+  flex-direction: column;
   margin: 5%;
 }
 
@@ -62,11 +63,11 @@
   margin-bottom: 2rem;
   text-align: center;
   position: relative;
-  height: 180px;
+  height: 150px;
 }
 
 .dynamic-box .upload-box input[type="file"] {
-  display: none; /* 실제 파일 입력 요소를 숨깁니다 */
+  display: none;
 }
 
 .dynamic-box .upload-box label {
@@ -85,55 +86,52 @@
 
 .dynamic-box .upload-box label:hover {
   background: #0056b3;
-  border-color: #0056b3; /* 호버 시 테두리 색상 변경 */
+  border-color: #0056b3;
 }
 
 .dynamic-box .upload-box p {
   margin: 0;
+  position: relative;
+  top: -20px;
 }
 
 .dynamic-box .upload-box img {
   width: 50px;
   height: 50px;
   margin-bottom: 1rem;
-}
-
-.dynamic-box .upload-box p {
-  display: flex;
+  position: relative;
+  top: -20px;
 }
 
 .dynamic-box .upload-button {
-  padding: 0.5rem 1rem; /* 여유 공간 추가 */
-  background: #4a4a4a;
+  padding: 0.5rem 1rem;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-bottom: 1rem;
-  position: absolute;
-  height: 40px;
+  height: 35px;
   width: 100px;
-  top: 290px;
-  right: 20px;
+  font-size: 12px;
+  left: 180px;
+  top: 100px;
+  position:absolute;
 }
 
-.dynamic-box .upload-details {
-  font-size: 0.9rem;
-  color: #4a4a4a;
-  text-align: center;
-  display: flex;
-  position: relative;
-  top: 325px;
+.dynamic-box .upload-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
 }
 
 .section-title {
   position: absolute;
-  top: 85px;
+  top: 85px; 
   left: 40px;
   transform: translateX(-50%);
   font-size: 18px;
   font-weight: 500;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .title {
@@ -143,22 +141,27 @@
 
 .form-group {
   position: relative;
-  top: 145px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  top: 10%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
 .dynamic-box .submit-button {
   position: absolute;
-  bottom: 10px; /* 하단에서의 거리 */
-  right: 10px; /* 오른쪽에서의 거리 */
-  padding: 0.5rem 1rem; /* 여유 공간 추가 */
-  background: #007bff; /* 버튼 색상 */
+  bottom: 10px;
+  right: 10px;
+  padding: 0.5rem 1rem;
+  background: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.dynamic-box .submit-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
 }
 
 .dynamic-box .close-button:hover {
@@ -170,13 +173,14 @@
   width: 70px;
   align-self: flex-end;
 }
+
 .dynamic-box .upload-details {
-  bottom: 2px;
-  right: 20px;
   position: absolute;
   font-size: 12px;
   font-weight: lighter;
   height: 20px;
+  top: 250px;
+  right: 25px;
 }
 
 .dynamic-box .upload-box p {
@@ -186,13 +190,13 @@
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 0.2rem;
+  padding: 0.1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
 
 .form-group select {
-  margin-top: 0.2rem;
+  margin-top: 0.1rem;
 }
 
 .form-group label {
@@ -207,8 +211,9 @@
 }
 
 .dynamic-box h3 {
-  margin-top: 35px;
+  margin-top: 10%;
   font-size: 25px;
+  height: 11px;
 }
 
 /* CSS for image gallery */
@@ -222,6 +227,8 @@
   white-space: nowrap;
   gap: 10px;
   padding: 10px;
+  margin-top: 6%; /* h3로부터 10px 떨어짐 */
+  margin-bottom: 1%;
 }
 
 .image-gallery img {
@@ -237,4 +244,46 @@
 
 .upload-result p {
   text-align: center;
+}
+
+.details-button {
+  padding: 0.5rem 1rem;
+  background: #919191;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  height: 35px;
+  width: 85px;
+  font-size: 12px;
+  position: absolute;
+  right: 18px;
+  top:280px;
+}
+
+.details-button:hover {
+  background: #797979;
+  border-color: #797979;
+}
+
+.select-image-button {
+  position: absolute;
+  bottom: 20px;
+  width: 25%;
+  right: 20px;
+  height: inherit;
+  height: 40px;
+  padding: 0.5rem 1rem;
+  background: hsl(211, 100%, 50%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.select-image-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
 }

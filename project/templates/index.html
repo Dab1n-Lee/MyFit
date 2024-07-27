@@ -1,70 +1,74 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="{{ url_for('static', filename='css/main.css') }}"
-      rel="stylesheet"
-    />
-    <script>
-      const dynamicCssUrl =
-        "{{ url_for('static', filename='css/dynamic.css') }}";
-      const detailCssUrl =
-        "{{ url_for('static', filename='css/details.css') }}";
-      const uploadImgUrl =
-        "{{ url_for('static', filename='images/upload_img.png') }}";
-    </script>
-    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="screen">
-      <div class="header">
-        <span class="Logo" onclick="returnToHome()">MyFit</span>
-        <div class="mybody">
-          <span class="mybody_str">my body</span>
-          <img
-            src="{{ url_for('static', filename='images/mybody_img.png') }}"
-            class="mybody_img"
-            alt="Description of image"
-          />
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+        <link
+            href="{{ url_for('static', filename='css/main.css') }}"
+            rel="stylesheet"
+        />
+        <script>
+            const dynamicCssUrl =
+                "{{ url_for('static', filename='css/dynamic.css') }}";
+            const detailCssUrl =
+                "{{ url_for('static', filename='css/details.css') }}";
+            const uploadImgUrl =
+                "{{ url_for('static', filename='images/upload_img.png') }}";
+        </script>
+
+        <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+        <title>Document</title>
+    </head>
+    
+    <body>
+        <div class="screen">
+            <div class="header">
+                <span class="Logo" onclick="returnToHome()">MyFit</span>
+                <div class="mybody">
+                    <span class="mybody_str">my body</span>
+                    <img
+                    src="{{ url_for('static', filename='images/mybody_img.png') }}"
+                    class="mybody_img"
+                    alt="Description of image"
+                  />                
+                </div>
+                <div class="mycloset">
+                    <img
+                    src="{{ url_for('static', filename='images/mycloset_img.png') }}"
+                    class="mycloset_img"
+                    alt="Description of image"
+                  />                   
+                <span class="mycloset_str">my closet</span>
+                </div>
+            </div>
+            <div class="main">
+                <div class="dynamic-box-main" id="drop-area">
+                    <h2 class="dynamic-box-main-title">Upload your photo</h2>
+                    <div class="upload-label" id="upload-button">
+                        <img
+                        src="{{ url_for('static', filename='images/upload_img.png') }}"
+                        alt="Upload Icon"
+                      />                        
+                      <p>Drag & Drop or select from your device.</p>
+                        <button type="button" class="upload-button" onclick="document.getElementById('file-upload').click()">Choose File</button>
+                    </div>
+
+                    <div class = "image contianer"> 
+                        <input type="file" id="file-upload" accept="image/*" style="display: none;">
+                        <img id="preview" src="" alt="Image Preview">
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="footer">
+                <span class="footer_logo">MyFit</span>
+                <div class="footer_container">
+                    <span class="footer_content">About</span>
+                    <span class="footer_content">Policy</span>
+                    <span class="footer_content">Policy</span>
+                    <span class="footer_content">About</span>
+                    <span class="footer_content">About</span>
+                </div>
+            </div>
         </div>
-        <div class="mycloset">
-          <img
-            src="{{ url_for('static', filename='images/mycloset_img.png') }}"
-            class="mycloset_img"
-            alt="Description of image"
-          />
-          <span class="mycloset_str">my closet</span>
-        </div>
-      </div>
-      <div class="main">
-        <div class="dynamic-box-main">
-          <h2 class="dynamic-box-main-title">Upload your photo</h2>
-          <label for="file-upload" class="upload-label">
-            <img
-              src="{{ url_for('static', filename='images/upload_img.png') }}"
-              alt="Upload Icon"
-            />
-            <p>Drag & Drop or select from your device.</p>
-            <label for="file-upload">Choose File</label>
-            <input type="file" id="file-upload" accept="image/*" />
-          </label>
-        </div>
-      </div>
-      <div class="footer">
-        <span class="footer_logo">MyFit</span>
-        <div class="footer_container">
-          <span class="footer_content">About</span>
-          <span class="footer_content">Policy</span>
-          <span class="footer_content">Policy</span>
-          <span class="footer_content">About</span>
-          <span class="footer_content">About</span>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
