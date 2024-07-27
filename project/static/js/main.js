@@ -289,13 +289,52 @@ document.addEventListener("DOMContentLoaded", () => {
                     <label for="waist">Waist</label>
                     <input type="text" id="waist" name="waist">
                     <select id="waist-unit" name="waist-unit">
-                        <option value="cm">cm</option>
                         <option value="inch">inch</option>
+                        <option value="cm">cm</option>
                     </select>
                 </div>
                 <button class="submit-button">Save</button>
             </div>
         `);
+
+    document
+      .querySelector(".submit-button")
+      .addEventListener("click", function () {
+        const height = document.getElementById("height").value;
+        const heightUnit = document.getElementById("height-unit").value;
+        const weight = document.getElementById("weight").value;
+        const weightUnit = document.getElementById("weight-unit").value;
+        const waist = document.getElementById("waist").value;
+        const waistUnit = document.getElementById("waist-unit").value;
+
+        const data = {
+          height: { value: height, unit: heightUnit },
+          weight: { value: weight, unit: weightUnit },
+          waist: { value: waist, unit: waistUnit },
+        };
+
+        console.log("AJAX 요청 전송:", data); // 디버그 메시지 추가
+
+        fetch("body/save", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            if (data.success) {
+              alert("Body info saved successfully!");
+            } else {
+              alert("Failed to save body info.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("An error occurred while saving body info.");
+          });
+      });
   });
 
   // Create overlay when mycloset is clicked

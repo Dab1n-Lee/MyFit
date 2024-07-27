@@ -22,6 +22,9 @@ def create_app():
     login_manager.login_message_category = "danger"
     login_manager.session_protection = "strong"
 
+
+    
+
     @application.route("/")
     def index():
         return render_template("login.html")
@@ -37,6 +40,8 @@ def create_app():
         return redirect(url_for('auth.login'))
     
     from project.auth import auth
+    from project.body import body
     application.register_blueprint(auth.bp)
+    application.register_blueprint(body.bp)
     
     return application

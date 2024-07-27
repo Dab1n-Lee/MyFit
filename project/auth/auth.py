@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, request, flash, abort
 from flask_login import login_user, login_required, current_user, logout_user
 from werkzeug.security import generate_password_hash, check_password_hash
-from ..utils.models import User, UserInfo
+from ..utils.models import User
 from ..forms.auth_forms import RegistrationForm
 from project import db
 
@@ -12,6 +12,7 @@ bp = Blueprint('auth', __name__, url_prefix="/")
 def register():
     form = RegistrationForm()
     if request.method == 'POST':
+        print('접근')   
         if form.validate_on_submit():
             existing_user = User.query.filter_by(user_id=form.user_id.data).first()
             if existing_user:
@@ -75,13 +76,14 @@ def add_user_info(user_id):
     
     return render_template('index.html', user=user)
 
-@bp.route('/profile/<nickname>')
+@bp.route('/<nickname>')
 @login_required
 def profile(nickname):
     if nickname != current_user.nickname:
         abort(403)
-    user_info_exists = UserInfo.query.filter_by(user_id=current_user.id).first() is not None
-    return render_template('index.html', nickname=nickname, user_info_exists=user_info_exists)
+    return render_template('index.html', nickname=nickname)
+
+
 
 
 @bp.route('/profile_info/<int:user_id>')
