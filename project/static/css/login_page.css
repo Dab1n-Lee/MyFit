@@ -46,8 +46,8 @@ body {
 
 .v21_45 {
   width: 100%;
-  background: rgba(255, 255, 255, 1);
-  padding: 50px;
+  background: rgba(241, 241, 241, 0.7);
+  padding: 100px 70px 50px 70px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -65,20 +65,22 @@ body {
 .v9_11,
 .v9_12 {
   width: 100%;
-  max-width: 260px;
-  height: 56px;
+  max-width: 300px;
+  height: 60px;
   background: rgba(217, 217, 217, 1);
-  margin-bottom: 20px;
-  padding: 0 10px;
+  margin-bottom: 30px;
+  padding: 0 20px;
   border-radius: 10px;
   font-size: 20px;
+  border: none;
+  outline: none;
 }
 
 .v19_40 {
   width: 100%;
-  max-width: 260px;
-  height: 56px;
-  background: rgba(33, 31, 116, 1);
+  max-width: 300px;
+  height: 60px;
+  background: rgba(9, 4, 0, 0.6);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -88,9 +90,10 @@ body {
 
 .v12_23 {
   color: rgba(255, 255, 255, 1);
-  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
   font-size: 20px;
-  background: rgba(33, 31, 116, 1); /* Added line */
+  background: rgba(9, 4, 0, 0.6); /* Added line */
   border: none; /* Added line */
   width: 100%; /* Added line */
   height: 100%; /* Added line */
@@ -100,20 +103,13 @@ body {
   border-radius: 10px; /* Added line */
 }
 
-.v10_14,
 .v13_34 {
   width: 100%;
   max-width: 260px;
   font-size: 16px;
   text-align: center;
-  margin-bottom: 10px;
-}
-
-.v10_14 {
-  color: black;
-}
-
-.v13_34 {
+  margin-bottom: 0px;
+  margin-top: 0px;
   color: red;
   text-decoration: underline;
   cursor: pointer;

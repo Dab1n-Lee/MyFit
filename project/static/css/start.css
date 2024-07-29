@@ -1,0 +1,46 @@
+/* 모든 요소의 box-sizing을 border-box로 설정 */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* 전체 body를 flexbox로 설정하여 중앙 정렬 */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  height: 100vh; /* 화면 전체 높이 사용 */
+  margin: 0; /* 기본 마진 제거 */
+  background-color: #f4f4f4; /* 배경색 설정 */
+}
+
+/* 컨테이너를 중앙에 배치하고 텍스트를 중앙 정렬 */
+.container {
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+/* MyFit 텍스트 스타일 */
+.v1 {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 5vw; /* 화면 크기에 비례하는 폰트 크기 */
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 링크 스타일 */
+.links {
+  margin-top: 10px; /* 링크 위쪽 여백 */
+}
+
+/* .link {
+  color: #007bff;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin: 0 5px;
+}
+
+.link:hover {
+  color: #0056b3;
+} */
