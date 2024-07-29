@@ -27,7 +27,7 @@ def create_app():
 
     @application.route("/")
     def index():
-        return render_template("login.html")
+        return render_template("start.html")
     
     from project.utils.models import User
     @login_manager.user_loader

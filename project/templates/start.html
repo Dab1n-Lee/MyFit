@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyFit</title>
-    <link rel="stylesheet" href="static/css/start.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/start.css') }}"
+    />
   </head>
   <body>
     <div class="container">
       <span class="v1">MyFit</span>
       <div class="links">
-        <a href="/login" class="link">Log in</a> or
-        <a href="/register" class="link">Sign in here</a>
+        <a href="{{ url_for('auth.login') }}" class="link">Log in</a> or
+        <a href="{{ url_for('auth.register') }}" class="link">Sign up</a> here
       </div>
     </div>
   </body>
