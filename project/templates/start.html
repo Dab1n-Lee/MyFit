@@ -6,15 +6,18 @@
     <title>MyFit</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='css/start.css') }}"
+      href="{{ url_for('static', filename='css/start_page.css') }}"
     />
   </head>
   <body>
     <div class="container">
       <span class="v1">MyFit</span>
       <div class="links">
-        <a href="{{ url_for('auth.login') }}" class="link">Log in</a> or
-        <a href="{{ url_for('auth.register') }}" class="link">Sign up</a> here
+        <a href="{{ url_for('auth.login') }}" class="link login-link">Log in</a>
+        or
+        <a href="{{ url_for('auth.register') }}" class="link signup-link"
+          >Sign up</a
+        >
       </div>
     </div>
   </body>

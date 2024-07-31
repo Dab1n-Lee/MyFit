@@ -1,0 +1,53 @@
+/* 모든 요소의 box-sizing을 border-box로 설정 */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* 전체 body를 flexbox로 설정하여 중앙 정렬 */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgba(224, 224, 224, 1);
+}
+
+.container {
+  text-align: center;
+  margin-top: -30px;
+}
+
+.v1 {
+  color: rgba(0, 0, 0, 1);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 5vw; /* 화면 크기에 비례하는 폰트 크기 */
+  margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 링크 스타일 */
+.links {
+  margin-top: 30px; /* 링크 위쪽 여백 */
+  font-size: 1.5vw;
+}
+
+.link.login-link {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.link.login-link:hover {
+  color: #003366;
+}
+
+.link.signup-link {
+  color: #ff3300;
+  text-decoration: underline;
+}
+
+.link.signup-link:hover {
+  color: #cc2900;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,18 +7,28 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/login_page.css') }}"
     />
     <title>MyFit</title>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </head>
   <body>
     <div class="v1_2">
       <div class="v27_3">
         <span class="v8_10">MyFit</span>
         <div class="v21_45">
+          <img
+            src="{{ url_for('static', filename='images/back_arrow_img.png') }}"
+            alt="Back"
+            class="back-arrow"
+            onclick="goBack()"
+          />
           <form
             action="{{ url_for('auth.login') }}"
             method="post"
