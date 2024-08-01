@@ -16,6 +16,19 @@
       function goBack() {
         window.history.back();
       }
+
+      function validateForm(event) {
+        const id = document.querySelector('input[name="id"]').value;
+        const password = document.querySelector('input[name="password"]').value;
+
+        if (!id) {
+          alert("Please enter your ID");
+          event.preventDefault(); // Prevent form submission
+        } else if (!password) {
+          alert("Please enter your password");
+          event.preventDefault(); // Prevent form submission
+        }
+      }
     </script>
   </head>
   <body>
@@ -33,6 +46,7 @@
             action="{{ url_for('auth.login') }}"
             method="post"
             class="login-form"
+            onsubmit="validateForm(event)"
           >
             <input class="v9_11" name="id" type="text" placeholder="ID" />
             <input

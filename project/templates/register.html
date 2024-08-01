@@ -11,62 +11,72 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='/css/register_page.css') }}"
     />
-    <title>회원가입 - MyFit</title>
+    <title>MyFit_Signup</title>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
   </head>
   <body>
     <div class="container">
       <div class="form-container">
-        <span class="title">회원가입</span>
+        <img
+          src="{{ url_for('static', filename='images/back_arrow_img.png') }}"
+          alt="Back"
+          class="back-arrow"
+          onclick="goBack()"
+        />
         <form method="post" class="register-form">
           {{ form.hidden_tag() }}
           <input
             class="input-field"
             name="user_id"
             type="text"
-            placeholder="사용자 ID"
+            placeholder="User ID"
             value="{{ request.form.user_id or '' }}"
           />
           <input
             class="input-field"
             name="password"
             type="password"
-            placeholder="비밀번호"
+            placeholder="Password"
             value="{{ request.form.password or '' }}"
           />
           <input
             class="input-field"
             name="confirm_password"
             type="password"
-            placeholder="비밀번호 확인"
+            placeholder="Confirm Password"
             value="{{ request.form.confirm_password or '' }}"
           />
           <input
             class="input-field"
             name="nickname"
             type="text"
-            placeholder="이름(닉네임)"
+            placeholder="Name(Nickname)"
             value="{{ request.form.nickname or '' }}"
           />
           <input
             class="input-field"
             name="birthdate"
             type="text"
-            placeholder="생년월일 (ex) 990120"
+            placeholder="Birth Date (ex) 990120"
             value="{{ request.form.birthdate or '' }}"
           />
           <div class="gender-selection">
-            <label class="gender-label">성별</label>
-            <label
-              ><input type="radio" name="gender" value="0" {{ 'checked' if
-              request.form.gender == '0' else '' }}> 남</label
-            >
-            <label
-              ><input type="radio" name="gender" value="1" {{ 'checked' if
-              request.form.gender == '1' else '' }}> 여</label
-            >
+            <label class="gender-label">Gender</label>
+            <label>
+              <input type="radio" name="gender" value="0" {{ 'checked' if
+              request.form.gender == '0' else '' }}> Male
+            </label>
+            <label>
+              <input type="radio" name="gender" value="1" {{ 'checked' if
+              request.form.gender == '1' else '' }}> Female
+            </label>
           </div>
           <div class="submit-button-container">
-            <button type="submit" class="submit-button">MyFit</button>
+            <button type="submit" class="submit-button">Sign Up</button>
           </div>
         </form>
       </div>
