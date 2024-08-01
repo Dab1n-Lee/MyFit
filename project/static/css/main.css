@@ -8,10 +8,10 @@ body {
 .screen {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(255,255,255,1);
   position: absolute;
   flex-direction: column;
-  min-width: 657px;
+  min-width:657px;
 }
 
 .header {
@@ -26,8 +26,9 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 .main {
   width: 100%;
@@ -38,12 +39,13 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  min-height: 544px;
+  min-height: 600px;
 }
+
 
 .footer {
   width: 100%;
-  height: 7rem;
+  height: 7rem; 
   background: rgba(131, 131, 131, 1);
   opacity: 1;
   display: flex;
@@ -53,58 +55,62 @@ body {
 
 .footer_logo {
   width: 55px;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255,255,255,1);
   position: absolute;
   font-family: Inter;
   font-weight: bold;
   font-size: 10px;
   opacity: 1;
   text-align: center;
-  left: 18%;
+  left:18%;
   top: 35%;
-  float: left;
-  white-space: nowrap;
+  float:left;
+  white-space: nowrap; 
+
 }
 
-.footer_container {
+.footer_container{
   width: 70%;
-  position: absolute;
+  position:absolute;
   align-items: center;
-  float: left;
-  top: 30%;
-  left: 30%;
+  float:left;
+  top:30%;
+  left:30%;
+ 
 }
 
 .footer_content {
   color: rgb(255, 255, 255);
   width: 10%;
   height: 20%;
-  flex: 1;
+  flex:1;
   text-align: left;
   font-family: Inter;
-  font-weight: lighter;
+  font-weight:lighter;
   font-size: 10px;
   position: relative;
   padding: 4%;
-  white-space: nowrap;
+  white-space: nowrap; 
+
 }
 
 .Logo {
   width: 155px;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0,0,0,1);
   position: absolute;
   top: 7%;
   right: 60px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: Bold;
   font-size: 40px;
   text-align: right;
   float: right;
-  white-space: nowrap;
+  white-space: nowrap; 
+
 }
 
 .mybody_img {
-  width: 36px;
+  width:36px;
   height: 36px;
   background: url("../images/mybody_img.png");
   background-repeat: no-repeat;
@@ -126,53 +132,57 @@ body {
   position: absolute;
   top: -20%;
   overflow: hidden;
-  left: 25px;
+  left:25px;
+
 }
 
 .mycloset_str {
   width: 5%;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0,0,0,1);
   position: absolute;
   top: 70%;
   left: 40px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: Regular;
   font-size: 70%;
   opacity: 1;
   text-align: left;
-  white-space: nowrap;
+  white-space: nowrap; 
+
 }
 
 .mybody_str {
   width: 5%;
-  color: rgba(0, 0, 0, 1);
+  color: rgba(0,0,0,1);
   position: relative;
   top: 65%;
   left: 40px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: Regular;
   font-size: 70%;
   opacity: 1;
   text-align: center;
-  white-space: nowrap;
+  white-space: nowrap; 
 }
 
-.mybody {
+.mybody{
   width: 120px;
   height: 100%;
-  position: absolute;
+  position:absolute;
   align-items: center;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.mycloset {
+.mycloset{
   width: 120px;
   height: 100%;
-  position: absolute;
+  position:absolute;
   align-items: center;
-  left: 120px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  left:120px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+
 
 /* 호버 상태 스타일 */
 .mybody:hover {
@@ -186,7 +196,8 @@ body {
 .mybody:hover .mybody_str {
   color: white; /* 호버 시 글자 색상 반전 */
   font-weight: bolder;
-  left: 35px;
+  left:35px;
+
 }
 
 .mycloset:hover {
@@ -200,68 +211,127 @@ body {
 .mycloset:hover .mycloset_str {
   color: white; /* 호버 시 글자 색상 반전 */
   font-weight: bold;
-  left: 33px;
+  left:33px;
 }
 
-.h2 {
-  font-size: 10px;
+.h2{
+  font-size:10px;
 }
 
-.dynamic-box-main {
+
+
+
+.dynamic-box-main{
   position: relative;
   width: 400px;
   height: 400px;
   background-color: antiquewhite;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: flex;
 }
 
-.dynamic-box-main-title {
-  position: absolute;
-  left: 22%;
+.dynamic-box-main-title{
+  position:absolute;
+  left:22%;
 }
 
-.dynamic-box-main img {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-
-.dynamic-box-main p {
-  position: absolute;
-}
-.dynamic-box-main input {
-  position: absolute;
-  top: 50%;
-}
-
-.dynamic-box-main .upload-label label {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
-  color: white;
-  border-radius: 5px;
+.upload-label {
   cursor: pointer;
-  font-size: 1rem;
-  border: 2px solid transparent;
-  transition: background 0.3s, border 0.3s;
-  position: absolute; /* 위치 조정 */
-  bottom: 100px; /* 박스 하단으로부터의 거리 */
-  right: 140px; /* 박스 오른쪽으로부터의 거리 */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 60%;
+  border-style: dotted;
+  padding: 10px; /* 상자 안쪽에 10px 여백 추가 */
+  box-sizing: border-box; /* 패딩을 포함하여 요소의 크기를 계산 */
+  left: 2.5%;
+  top: 3%;
+}
+
+.dynamic-box-main .upload-label img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left:150px;
+  top:20%;
+}
+
+.dynamic-box-main .upload-label p {
+  top: 130px;
+  left: 80px;
+  position: absolute;
+}
+
+
+#preview {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  left: 20%;
+  top: 20%;
+}
+
+#cancel-button{
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#modeling-button{
+  position:absolute;
+  background-color: #05ca33;;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  bottom: 10px;
+  right: 5px;
+}
+#modeling-button:hover{
+  background-color: #01791d;;
+  border-color: #01791d;
+  
 }
 
 .dynamic-box-main input[type="file"] {
   display: none; /* 실제 파일 입력 요소를 숨깁니다 */
 }
 
-.dynamic-box-main .upload-label p {
-  position: absolute;
-  left: 20%;
-  top: 50%;
+
+.dynamic-box-main.dragover {
+  border-color: #000;
 }
 
-.dynamic-box-main img {
-  left: 40%;
-  top: 30%;
-  width: 90px;
-  height: 90px;
+
+.upload-button {
+  background-color: #007bff;;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  position:absolute;
+  left: 130px;
+  bottom: 13px;
+}
+.upload-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.upload-label p {
+  font-size: 14px; /* 글꼴 크기 */
+  position: absolute;
+  top: 60px;
+  left: 50px;
 }
