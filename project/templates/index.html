@@ -48,16 +48,17 @@
                         <img
                         src="{{ url_for('static', filename='images/upload_img.png') }}"
                         alt="Upload Icon"
-                      />                        
-                      <p>Drag & Drop or select from your device.</p>
+                        />                         
+                        <p>Drag & Drop or select from your device.</p>
                         <button type="button" class="upload-button" onclick="document.getElementById('file-upload').click()">Choose File</button>
                     </div>
-
-                    <div class = "image contianer"> 
+        
+                    <div class="image-container"> 
                         <input type="file" id="file-upload" accept="image/*" style="display: none;">
-                        <img id="preview" src="" alt="Image Preview">
+                        <img id="preview" src="" alt="Image Preview" style="display: none;">
+                        <button id="cancel-button" style="display: none;" >&lt;</button>
+                        <button id="modeling-button" style="display: none;">Modeling</button>
                     </div>
-                   
                 </div>
             </div>
             <div class="footer">

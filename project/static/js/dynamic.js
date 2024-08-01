@@ -115,6 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const fileUploadDynamic = document.getElementById('file-upload-dynamic');
         const dropAreaDynamic = document.getElementById('drop-area-dynamic-box');
+        const selectImageButton = document.getElementById('select-image-button');
+        const imageGallery = document.getElementById('image-gallery');
 
         fileUploadDynamic.addEventListener('change', function(event) {
             const files = event.target.files;
@@ -149,6 +151,55 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.upload-button').addEventListener('click', () => {
             fileUploadDynamic.click();
         });
+
+        imageGallery.addEventListener('click', (event) => {
+            if (event.target.tagName === 'IMG') {
+                const clickedImage = event.target;
+                const isSelected = clickedImage.classList.contains('selected');
+                
+                // Deselect all images if one is selected
+                imageGallery.querySelectorAll('img').forEach(img => {
+                    img.classList.remove('selected');
+                    img.classList.remove('with-check');
+                    img.dataset.selected = 'false';
+                });
+
+                if (!isSelected) {
+                    clickedImage.classList.add('selected');
+                    clickedImage.classList.add('with-check');
+                    clickedImage.dataset.selected = 'true';
+                    selectedImageId = clickedImage.dataset.id;
+                    selectImageButton.classList.add('enabled');
+                    selectImageButton.disabled = false;
+                } else {
+                    selectedImageId = null;
+                    selectImageButton.classList.remove('enabled');
+                    selectImageButton.disabled = true;
+                }
+            }
+        });
+
+        selectImageButton.addEventListener('click', () => {
+            if (selectedImageId) {
+                // Sending the selected image ID to the server
+                fetch('/process-image', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ imageId: selectedImageId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Image processing successful:', data);
+                })
+                .catch(error => {
+                    console.error('Error processing image:', error);
+                });
+            } else {
+                console.warn('No image selected');
+            }
+        });
     }
 
     function handleDynamicFiles(files) {
@@ -159,10 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const reader = new FileReader();
             reader.onload = function(e) {
-                const gallery = document.getElementById('image-gallery');
+               const gallery = document.getElementById('image-gallery');
                 const img = document.createElement('img');
                 img.src = e.target.result;
                 img.alt = 'Uploaded Image';
+                img.classList.add('gallery-image');
+                img.dataset.id = Date.now(); // Assign a unique ID
                 gallery.appendChild(img);
             };
             reader.readAsDataURL(file);
@@ -178,6 +231,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const img = document.createElement('img');
                 img.src = data.file.url;
                 img.alt = 'Uploaded Image';
+                img.dataset.id = data.file.id; // Use ID from server
+                img.classList.add('gallery-image');
                 gallery.appendChild(img);
             })
             .catch(error => {
@@ -229,21 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
     main.addEventListener('click', (event) => {
         if (event.target && event.target.classList.contains('upload-button')) {
             document.getElementById('file-upload-dynamic').click();
-        }
-    });
-
-    document.querySelector('#select-image-button').addEventListener('click', () => {
-        if (selectedImageId) {
-            console.log(`Image with ID ${selectedImageId} will be processed`);
-        } else {
-            console.warn('No image selected');
-        }
-    });
-
-    document.querySelector('#image-gallery').addEventListener('click', (event) => {
-        if (event.target && event.target.tagName === 'IMG') {
-            selectedImageId = event.target.id;
-            document.querySelector('#select-image-button').disabled = false;
         }
     });
 });

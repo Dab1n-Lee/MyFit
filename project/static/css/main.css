@@ -266,10 +266,39 @@ body {
 
 #preview {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 60%;
+  height: 60%;
+  left: 20%;
+  top: 20%;
+}
+
+#cancel-button{
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#modeling-button{
+  position:absolute;
+  background-color: #05ca33;;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
   bottom: 10px;
-  left: 10px;
+  right: 5px;
+}
+#modeling-button:hover{
+  background-color: #01791d;;
+  border-color: #01791d;
+  
 }
 
 .dynamic-box-main input[type="file"] {

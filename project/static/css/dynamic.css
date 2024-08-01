@@ -275,15 +275,47 @@
   height: inherit;
   height: 40px;
   padding: 0.5rem 1rem;
-  background: hsl(211, 100%, 50%);
+  background: hsl(0, 0%, 56%);
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 13px;
 }
 
-.select-image-button:hover {
+
+
+/* 기본 이미지 스타일 */
+.gallery-image {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s;
+}
+
+.gallery-image.selected {
+  border-color: hsl(211, 100%, 50%);
+}
+
+.gallery-image.with-check::after {
+  content: '\2714'; /* Checkmark character */
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  color: green;
+  font-size: 24px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+/* 활성화된 버튼 스타일 */
+.select-image-button.enabled {
+  background-color:#007bff;
+  color: white;
+  cursor: pointer;
+}
+.select-image-button.enabled:hover {
   background: #0056b3;
   border-color: #0056b3;
+  cursor: pointer;
 }
