@@ -4,6 +4,8 @@
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .screen {
   width: 100%;
@@ -16,7 +18,7 @@ body {
 
 .header {
   width: 100%;
-  height: 4.5rem;
+  height: 5rem;
   background-size: cover;
   opacity: 1;
   position: relative;
@@ -26,6 +28,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -92,85 +95,86 @@ body {
 .Logo {
   width: 155px;
   color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 7%;
-  right: 60px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: Bold;
-  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  font-style: italic;
   text-align: right;
-  float: right;
   white-space: nowrap;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 .mybody_img {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background: url("../images/mybody_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 8%;
-  left: 45px;
+  top: 15%;
+  left: 50px;
   overflow: hidden;
 }
 .mycloset_img {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   background: url("../images/mycloset_img.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: -20%;
+  top: -10%;
   overflow: hidden;
-  left: 25px;
+  left: 30px;
 }
 
 .mycloset_str {
-  width: 5%;
+  width: auto; /* 가로 폭을 자동으로 설정 */
   color: rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 70%;
-  left: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 70%;
-  opacity: 1;
-  text-align: left;
-  white-space: nowrap;
-}
-
-.mybody_str {
-  width: 5%;
-  color: rgba(0, 0, 0, 1);
-  position: relative;
-  top: 65%;
-  left: 40px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: Regular;
-  font-size: 70%;
+  font-size: 80%;
   opacity: 1;
   text-align: center;
   white-space: nowrap;
+  padding-top: 45px;
+}
+
+.mybody_str {
+  width: auto; /* 가로 폭을 자동으로 설정 */
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: Regular;
+  font-size: 80%;
+  opacity: 1;
+  text-align: center;
+  white-space: nowrap;
+  padding-top: 45px;
 }
 
 .mybody {
-  width: 120px;
+  width: 140px;
   height: 100%;
   position: absolute;
-  align-items: center;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬, 필요시 제거 */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .mycloset {
-  width: 120px;
+  width: 140px;
   height: 100%;
+  left: 140px;
   position: absolute;
-  align-items: center;
-  left: 120px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬, 필요시 제거 */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -185,8 +189,8 @@ body {
 
 .mybody:hover .mybody_str {
   color: white; /* 호버 시 글자 색상 반전 */
-  font-weight: bolder;
-  left: 35px;
+  font-weight: regular;
+  left: 50px;
 }
 
 .mycloset:hover {
@@ -199,8 +203,8 @@ body {
 
 .mycloset:hover .mycloset_str {
   color: white; /* 호버 시 글자 색상 반전 */
-  font-weight: bold;
-  left: 33px;
+  font-weight: regular;
+  left: 50px;
 }
 
 .h2 {
