@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
@@ -15,11 +15,11 @@ body {
 
 .back-arrow {
   position: absolute;
-  top: 40px;
+  top: 30px;
   left: 30px;
   cursor: pointer;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 
 .v1_2 {
@@ -48,15 +48,16 @@ body {
   font-style: italic;
   font-size: 5vw; /* 줄어든 글자 크기 */
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   margin-top: -80px;
   white-space: nowrap;
 }
 
 .v21_45 {
   width: 100%;
+  max-width: 400px;
   background: rgba(241, 241, 241, 0.7);
-  padding: 100px 70px 50px 70px;
+  padding: 70px 30px 30px 30px;
   border-radius: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -70,26 +71,27 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 300px;
 }
 
 .v9_11,
 .v9_12 {
   width: 100%;
-  max-width: 300px;
-  height: 60px;
+  max-width: 250px;
+  height: 50px;
   background: rgba(217, 217, 217, 1);
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 0 20px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 15px;
   border: none;
   outline: none;
 }
 
 .v19_40 {
   width: 100%;
-  max-width: 300px;
-  height: 60px;
+  max-width: 250px;
+  height: 50px;
   background: rgba(9, 4, 0, 0.6);
   border-radius: 10px;
   display: flex;
@@ -102,10 +104,11 @@ body {
   color: rgba(255, 255, 255, 1);
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   background: rgba(9, 4, 0, 0.6);
   border: none;
   width: 100%;
+  max-width: 250px;
   height: 100%;
   display: flex;
   justify-content: center;

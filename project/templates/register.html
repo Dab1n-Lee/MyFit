@@ -9,12 +9,51 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='/css/register_page.css') }}"
+      href="{{ url_for('static', filename='css/register_page.css') }}"
     />
     <title>MyFit_Signup</title>
     <script>
       function goBack() {
         window.history.back();
+      }
+
+      function validateForm(event) {
+        // Get all input fields
+        const inputs = document.querySelectorAll(".input-field");
+        let password = "";
+        let confirmPassword = "";
+
+        // Check if any input field is empty
+        for (const input of inputs) {
+          if (!input.value.trim()) {
+            alert("Enter all information");
+            event.preventDefault(); // Prevent form submission
+            return;
+          }
+
+          if (input.name === "password") {
+            password = input.value;
+          } else if (input.name === "confirm_password") {
+            confirmPassword = input.value;
+          }
+        }
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+          alert("Password Mismatch");
+          event.preventDefault(); // Prevent form submission
+          return;
+        }
+
+        // If all fields are filled and passwords match, show the welcome message
+        if (confirm("Welcome to MyFit!")) {
+          // If the user clicks "OK", allow form submission
+          return true;
+        } else {
+          // If the user clicks "Cancel", prevent form submission
+          event.preventDefault();
+          return false;
+        }
       }
     </script>
   </head>
@@ -27,7 +66,11 @@
           class="back-arrow"
           onclick="goBack()"
         />
-        <form method="post" class="register-form">
+        <form
+          method="post"
+          class="register-form"
+          onsubmit="validateForm(event)"
+        >
           {{ form.hidden_tag() }}
           <input
             class="input-field"
