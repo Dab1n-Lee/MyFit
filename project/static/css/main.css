@@ -4,8 +4,6 @@
 body {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
 .screen {
   width: 100%;
@@ -18,7 +16,7 @@ body {
 
 .header {
   width: 100%;
-  height: 5rem;
+  height: 4.5rem;
   background-size: cover;
   opacity: 1;
   position: relative;
@@ -28,10 +26,6 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-<<<<<<< Updated upstream
-=======
-  align-items: center;
->>>>>>> Stashed changes
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -44,7 +38,7 @@ body {
   justify-content: center;
   align-items: center;
   display: flex;
-  min-height: 544px;
+  min-height: 600px;
 }
 
 .footer {
@@ -98,7 +92,6 @@ body {
 .Logo {
   width: 155px;
   color: rgba(0, 0, 0, 1);
-<<<<<<< Updated upstream
   position: absolute;
   top: 7%;
   right: 60px;
@@ -108,16 +101,6 @@ body {
   text-align: right;
   float: right;
   white-space: nowrap;
-=======
-  font-family: "Inter", sans-serif;
-  font-weight: 800;
-  font-size: 3vw;
-  font-style: italic;
-  text-align: right;
-  white-space: nowrap;
-  margin-left: auto; /* 좌측 여백을 자동으로 설정하여 우측 정렬 */
-  margin-right: 60px; /* 우측 여백 추가 */
->>>>>>> Stashed changes
 }
 
 .mybody_img {
@@ -128,7 +111,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 45px;
   overflow: hidden;
 }
@@ -141,7 +124,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: -10%;
+  top: -20%;
   overflow: hidden;
   left: 25px;
 }
@@ -154,7 +137,7 @@ body {
   left: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 80%;
+  font-size: 70%;
   opacity: 1;
   text-align: left;
   white-space: nowrap;
@@ -168,7 +151,7 @@ body {
   left: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 80%;
+  font-size: 70%;
   opacity: 1;
   text-align: center;
   white-space: nowrap;
@@ -230,11 +213,6 @@ body {
   height: 400px;
   background-color: antiquewhite;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-<<<<<<< Updated upstream
-}
-
-.dynamic-box-main-title {
-=======
   display: flex;
 }
 
@@ -245,20 +223,18 @@ body {
 
 .upload-label {
   cursor: pointer;
->>>>>>> Stashed changes
   position: absolute;
-  left: 22%;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  height: 60%;
+  border-style: dotted;
+  padding: 10px; /* 상자 안쪽에 10px 여백 추가 */
+  box-sizing: border-box; /* 패딩을 포함하여 요소의 크기를 계산 */
+  left: 2.5%;
+  top: 3%;
 }
 
-<<<<<<< Updated upstream
-.dynamic-box-main img {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-}
-
-.dynamic-box-main p {
-=======
 .dynamic-box-main .upload-label img {
   width: 90px;
   height: 90px;
@@ -274,20 +250,13 @@ body {
 }
 
 #preview {
->>>>>>> Stashed changes
   position: absolute;
-}
-.dynamic-box-main input {
-  position: absolute;
-  top: 50%;
+  width: 60%;
+  height: 60%;
+  left: 20%;
+  top: 20%;
 }
 
-<<<<<<< Updated upstream
-.dynamic-box-main .upload-label label {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #007bff;
-=======
 #cancel-button {
   position: absolute;
   top: 15px;
@@ -301,18 +270,11 @@ body {
 #modeling-button {
   position: absolute;
   background-color: #05ca33;
->>>>>>> Stashed changes
   color: white;
-  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 15px;
   cursor: pointer;
-<<<<<<< Updated upstream
-  font-size: 1rem;
-  border: 2px solid transparent;
-  transition: background 0.3s, border 0.3s;
-  position: absolute; /* 위치 조정 */
-  bottom: 100px; /* 박스 하단으로부터의 거리 */
-  right: 140px; /* 박스 오른쪽으로부터의 거리 */
-=======
   border: none;
   border-radius: 4px;
   bottom: 10px;
@@ -321,26 +283,12 @@ body {
 #modeling-button:hover {
   background-color: #01791d;
   border-color: #01791d;
->>>>>>> Stashed changes
 }
 
 .dynamic-box-main input[type="file"] {
   display: none; /* 실제 파일 입력 요소를 숨깁니다 */
 }
 
-<<<<<<< Updated upstream
-.dynamic-box-main .upload-label p {
-  position: absolute;
-  left: 20%;
-  top: 50%;
-}
-
-.dynamic-box-main img {
-  left: 40%;
-  top: 30%;
-  width: 90px;
-  height: 90px;
-=======
 .dynamic-box-main.dragover {
   border-color: #000;
 }
@@ -368,5 +316,4 @@ body {
   position: absolute;
   top: 60px;
   left: 50px;
->>>>>>> Stashed changes
 }
