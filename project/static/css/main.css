@@ -4,6 +4,8 @@
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .screen {
   width: 100%;
@@ -16,7 +18,7 @@ body {
 
 .header {
   width: 100%;
-  height: 4.5rem;
+  height: 5rem;
   background-size: cover;
   opacity: 1;
   position: relative;
@@ -26,6 +28,10 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
+<<<<<<< Updated upstream
+=======
+  align-items: center;
+>>>>>>> Stashed changes
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
@@ -92,6 +98,7 @@ body {
 .Logo {
   width: 155px;
   color: rgba(0, 0, 0, 1);
+<<<<<<< Updated upstream
   position: absolute;
   top: 7%;
   right: 60px;
@@ -101,6 +108,16 @@ body {
   text-align: right;
   float: right;
   white-space: nowrap;
+=======
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  font-style: italic;
+  text-align: right;
+  white-space: nowrap;
+  margin-left: auto; /* 좌측 여백을 자동으로 설정하여 우측 정렬 */
+  margin-right: 60px; /* 우측 여백 추가 */
+>>>>>>> Stashed changes
 }
 
 .mybody_img {
@@ -111,7 +128,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 8%;
+  top: 15%;
   left: 45px;
   overflow: hidden;
 }
@@ -124,7 +141,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: -20%;
+  top: -10%;
   overflow: hidden;
   left: 25px;
 }
@@ -137,7 +154,7 @@ body {
   left: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 70%;
+  font-size: 80%;
   opacity: 1;
   text-align: left;
   white-space: nowrap;
@@ -151,7 +168,7 @@ body {
   left: 40px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 70%;
+  font-size: 80%;
   opacity: 1;
   text-align: center;
   white-space: nowrap;
@@ -213,6 +230,12 @@ body {
   height: 400px;
   background-color: antiquewhite;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+<<<<<<< Updated upstream
+}
+
+.dynamic-box-main-title {
+=======
+  display: flex;
 }
 
 .dynamic-box-main-title {
@@ -220,6 +243,14 @@ body {
   left: 22%;
 }
 
+.upload-label {
+  cursor: pointer;
+>>>>>>> Stashed changes
+  position: absolute;
+  left: 22%;
+}
+
+<<<<<<< Updated upstream
 .dynamic-box-main img {
   width: 100px;
   height: 100px;
@@ -227,6 +258,23 @@ body {
 }
 
 .dynamic-box-main p {
+=======
+.dynamic-box-main .upload-label img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 150px;
+  top: 20%;
+}
+
+.dynamic-box-main .upload-label p {
+  top: 130px;
+  left: 80px;
+  position: absolute;
+}
+
+#preview {
+>>>>>>> Stashed changes
   position: absolute;
 }
 .dynamic-box-main input {
@@ -234,25 +282,53 @@ body {
   top: 50%;
 }
 
+<<<<<<< Updated upstream
 .dynamic-box-main .upload-label label {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: #007bff;
+=======
+#cancel-button {
+  position: absolute;
+  top: 15px;
+  left: 13px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#modeling-button {
+  position: absolute;
+  background-color: #05ca33;
+>>>>>>> Stashed changes
   color: white;
   border-radius: 5px;
   cursor: pointer;
+<<<<<<< Updated upstream
   font-size: 1rem;
   border: 2px solid transparent;
   transition: background 0.3s, border 0.3s;
   position: absolute; /* 위치 조정 */
   bottom: 100px; /* 박스 하단으로부터의 거리 */
   right: 140px; /* 박스 오른쪽으로부터의 거리 */
+=======
+  border: none;
+  border-radius: 4px;
+  bottom: 10px;
+  right: 5px;
+}
+#modeling-button:hover {
+  background-color: #01791d;
+  border-color: #01791d;
+>>>>>>> Stashed changes
 }
 
 .dynamic-box-main input[type="file"] {
   display: none; /* 실제 파일 입력 요소를 숨깁니다 */
 }
 
+<<<<<<< Updated upstream
 .dynamic-box-main .upload-label p {
   position: absolute;
   left: 20%;
@@ -264,4 +340,33 @@ body {
   top: 30%;
   width: 90px;
   height: 90px;
+=======
+.dynamic-box-main.dragover {
+  border-color: #000;
+}
+
+.upload-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  position: absolute;
+  left: 130px;
+  bottom: 13px;
+}
+.upload-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+}
+
+.upload-label p {
+  font-size: 14px; /* 글꼴 크기 */
+  position: absolute;
+  top: 60px;
+  left: 50px;
+>>>>>>> Stashed changes
 }
