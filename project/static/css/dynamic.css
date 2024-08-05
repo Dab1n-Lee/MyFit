@@ -103,7 +103,7 @@
   top: -20px;
 }
 
-.dynamic-box .upload-button {
+.dynamic-box .upload-button-dynamic {
   padding: 0.5rem 1rem;
   background: #007bff;
   color: white;
@@ -119,7 +119,7 @@
   position:absolute;
 }
 
-.dynamic-box .upload-button:hover {
+.dynamic-box .upload-button-dynamic:hover {
   background: #0056b3;
   border-color: #0056b3;
 }
