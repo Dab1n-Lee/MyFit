@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="upload-box" id="drop-area-dynamic-box">
                     <img src="${uploadImgUrl}" alt="Upload Icon">
                     <p>Drag & Drop or select from your device.</p>
-                    <button type="button" class="upload-button">Choose File</button>
+                    <button type="button" class="upload-button-dynamic">Choose File</button>
                     <input type="file" id="file-upload-dynamic" accept="image/*" style="display: none;">
                 </div>
                 <button class="details-button">Details</button>
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createDetailsBox();
         });
 
-        document.querySelector('.upload-button').addEventListener('click', () => {
+        document.querySelector('.upload-button-dynamic').addEventListener('click', () => {
             fileUploadDynamic.click();
         });
 
