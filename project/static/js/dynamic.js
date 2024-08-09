@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let bodyInfo = {
         height: { value: '', unit: 'cm' },
         weight: { value: '', unit: 'kg' },
-        waist: { value: '', unit: 'cm' }
+        waist: { value: '', unit: 'inch' }
     };
 
     // Temporary storage for details info
     let detailsInfo = {
         length: { value: '', unit: 'cm' },
-        waist: { value: '', unit: 'cm' }
+        waist: { value: '', unit: 'inch' }
     };
 
     const dynamicLink = document.createElement('link');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="details-form">
                     <div class="form-group">
                         <label for="length">Length</label>
-                        <input type="text" id="length" name="length" value="${detailsInfo.length.value}">
+                        <input type="text" id="length" name="length" value="">
                         <select id="length-unit" name="length-unit">
                             <option value="cm" ${detailsInfo.length.unit === 'cm' ? 'selected' : ''}>cm</option>
                             <option value="inch" ${detailsInfo.length.unit === 'inch' ? 'selected' : ''}>inch</option>
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="form-group">
                         <label for="waist-details">Waist</label>
-                        <input type="text" id="waist-details" name="waist-details" value="${detailsInfo.waist.value}">
+                        <input type="text" id="waist-details" name="waist-details" value="">
                         <select id="waist-details-unit" name="waist-details-unit">
                             <option value="cm" ${detailsInfo.waist.unit === 'cm' ? 'selected' : ''}>cm</option>
                             <option value="inch" ${detailsInfo.waist.unit === 'inch' ? 'selected' : ''}>inch</option>
@@ -120,6 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 console.log('Details info saved successfully:', data);
                 showSavedMessageInOverlay(); // Show the saved message within the overlay
+                // Convert the values to floating-point numbers and set the input fields
+                document.getElementById('height').value = parseFloat(data.height.value);
+                document.getElementById('weight').value = parseFloat(data.weight.value);
+                document.getElementById('waist').value = parseFloat(data.waist.value);
+                
+                // Optional: Set the unit fields as well if they exist
+                document.getElementById('height-unit').value = data.height.unit;
+                document.getElementById('weight-unit').value = data.weight.unit;
+                document.getElementById('waist-unit').value = data.waist.unit;
                 detailsOverlay.remove();
             })
             .catch(error => {
@@ -294,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2 class="sub-title">Edit and save your changed body measurement.</h2>
                     <div class="form-group">
                         <label for="height">Height</label>
-                        <input type="text" id="height" name="height" value="${bodyInfo.height.value}">
+                        <input type="text" id="height" name="height" value="">
                         <select id="height-unit" name="height-unit">
                             <option value="cm" ${bodyInfo.height.unit === 'cm' ? 'selected' : ''}>cm</option>
                             <option value="inch" ${bodyInfo.height.unit === 'inch' ? 'selected' : ''}>inch</option>
@@ -302,7 +311,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="form-group">
                         <label for="weight">Weight</label>
-                        <input type="text" id="weight" name="weight" value="${bodyInfo.weight.value}">
+                        <input type="text" id="weight" name="weight" value="">
                         <select id="weight-unit" name="weight-unit">
                             <option value="kg" ${bodyInfo.weight.unit === 'kg' ? 'selected' : ''}>kg</option>
                             <option value="lbs" ${bodyInfo.weight.unit === 'lbs' ? 'selected' : ''}>lbs</option>
@@ -310,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <div class="form-group">
                         <label for="waist">Waist</label>
-                        <input type="text" id="waist" name="waist" value="${bodyInfo.waist.value}">
+                        <input type="text" id="waist" name="waist" value="">
                         <select id="waist-unit" name="waist-unit">
                             <option value="cm" ${bodyInfo.waist.unit === 'cm' ? 'selected' : ''}>cm</option>
                             <option value="inch" ${bodyInfo.waist.unit === 'inch' ? 'selected' : ''}>inch</option>
@@ -340,6 +349,17 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 console.log('Body info saved successfully:', data);
                 showSavedMessageInOverlay(); // Show the saved message within the overlay
+                
+                // Convert the values to floating-point numbers and set the input fields
+                document.getElementById('height').value = parseFloat(data.height.value);
+                document.getElementById('weight').value = parseFloat(data.weight.value);
+                document.getElementById('waist').value = parseFloat(data.waist.value);
+                
+                // Optional: Set the unit fields as well if they exist
+                document.getElementById('height-unit').value = data.height.unit;
+                document.getElementById('weight-unit').value = data.weight.unit;
+                document.getElementById('waist-unit').value = data.waist.unit;
+               
             })
             .catch(error => {
                 console.error('Error saving body info:', error);
