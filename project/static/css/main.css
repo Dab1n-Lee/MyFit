@@ -111,7 +111,7 @@ body {
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 15%;
+  top: 9%;
   left: 50px;
   overflow: hidden;
 }
@@ -134,7 +134,7 @@ body {
   color: rgba(0, 0, 0, 1);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
-  font-size: 70%;
+  font-size: 80%;
   opacity: 1;
   text-align: center;
   white-space: nowrap;
