@@ -8,10 +8,10 @@ body {
 .screen {
   width: 100%;
   height: 100%;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   position: absolute;
   flex-direction: column;
-  min-width:657px;
+  min-width: 657px;
 }
 
 .header {
@@ -26,9 +26,9 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 
 .main {
   width: 100%;
@@ -42,10 +42,9 @@ body {
   min-height: 600px;
 }
 
-
 .footer {
   width: 100%;
-  height: 7rem; 
+  height: 7rem;
   background: rgba(131, 131, 131, 1);
   opacity: 1;
   display: flex;
@@ -55,75 +54,70 @@ body {
 
 .footer_logo {
   width: 55px;
-  color: rgba(255,255,255,1);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   font-family: Inter;
   font-weight: bold;
   font-size: 10px;
   opacity: 1;
   text-align: center;
-  left:18%;
+  left: 18%;
   top: 35%;
-  float:left;
-  white-space: nowrap; 
-
+  float: left;
+  white-space: nowrap;
 }
 
-.footer_container{
+.footer_container {
   width: 70%;
-  position:absolute;
+  position: absolute;
   align-items: center;
-  float:left;
-  top:30%;
-  left:30%;
- 
+  float: left;
+  top: 30%;
+  left: 30%;
 }
 
 .footer_content {
   color: rgb(255, 255, 255);
   width: 10%;
   height: 20%;
-  flex:1;
+  flex: 1;
   text-align: left;
   font-family: Inter;
-  font-weight:lighter;
+  font-weight: lighter;
   font-size: 10px;
   position: relative;
   padding: 4%;
-  white-space: nowrap; 
-
+  white-space: nowrap;
 }
 
 .Logo {
   width: 155px;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 7%;
-  right: 60px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: Bold;
-  font-size: 40px;
+  color: rgba(0, 0, 0, 1);
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 3vw;
+  font-style: italic;
   text-align: right;
-  float: right;
-  white-space: nowrap; 
-
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: 50px;
 }
 
 .mybody_img {
-  width:36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   background: url("../images/mybody_img.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
   position: absolute;
-  top: 8%;
-  left: 45px;
+  top: 15%;
+  left: 50px;
   overflow: hidden;
 }
 .mycloset_img {
-  width: 75px;
-  height: 75px;
+  width: 80px;
+  height: 80px;
   background: url("../images/mycloset_img.png");
   background-repeat: no-repeat;
   background-position: center center;
@@ -132,57 +126,55 @@ body {
   position: absolute;
   top: -20%;
   overflow: hidden;
-  left:25px;
-
+  left: 30px;
 }
 
 .mycloset_str {
-  width: 5%;
-  color: rgba(0,0,0,1);
-  position: absolute;
-  top: 70%;
-  left: 40px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: Regular;
-  font-size: 70%;
-  opacity: 1;
-  text-align: left;
-  white-space: nowrap; 
-
-}
-
-.mybody_str {
-  width: 5%;
-  color: rgba(0,0,0,1);
-  position: relative;
-  top: 65%;
-  left: 40px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: auto; /* 가로 폭을 자동으로 설정 */
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: Regular;
   font-size: 70%;
   opacity: 1;
   text-align: center;
-  white-space: nowrap; 
+  white-space: nowrap;
+  padding-top: 45px;
 }
 
-.mybody{
-  width: 120px;
+.mybody_str {
+  width: auto; /* 가로 폭을 자동으로 설정 */
+  color: rgba(0, 0, 0, 1);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: Regular;
+  font-size: 80%;
+  opacity: 1;
+  text-align: center;
+  white-space: nowrap;
+  padding-top: 45px;
+}
+
+.mybody {
+  width: 140px;
   height: 100%;
-  position:absolute;
-  align-items: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬, 필요시 제거 */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.mycloset{
-  width: 120px;
+.mycloset {
+  width: 140px;
   height: 100%;
-  position:absolute;
-  align-items: center;
-  left:120px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  left: 140px;
+  position: absolute;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬, 필요시 제거 */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
-
 
 /* 호버 상태 스타일 */
 .mybody:hover {
@@ -195,9 +187,8 @@ body {
 
 .mybody:hover .mybody_str {
   color: white; /* 호버 시 글자 색상 반전 */
-  font-weight: bolder;
-  left:35px;
-
+  font-weight: regular;
+  left: 50px;
 }
 
 .mycloset:hover {
@@ -210,29 +201,26 @@ body {
 
 .mycloset:hover .mycloset_str {
   color: white; /* 호버 시 글자 색상 반전 */
-  font-weight: bold;
-  left:33px;
+  font-weight: regular;
+  left: 50px;
 }
 
-.h2{
-  font-size:10px;
+.h2 {
+  font-size: 10px;
 }
 
-
-
-
-.dynamic-box-main{
+.dynamic-box-main {
   position: relative;
   width: 400px;
   height: 400px;
   background-color: antiquewhite;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   display: flex;
 }
 
-.dynamic-box-main-title{
-  position:absolute;
-  left:22%;
+.dynamic-box-main-title {
+  position: absolute;
+  left: 22%;
 }
 
 .upload-label {
@@ -253,8 +241,8 @@ body {
   width: 90px;
   height: 90px;
   position: absolute;
-  left:150px;
-  top:20%;
+  left: 150px;
+  top: 20%;
 }
 
 .dynamic-box-main .upload-label p {
@@ -262,7 +250,6 @@ body {
   left: 80px;
   position: absolute;
 }
-
 
 #preview {
   position: absolute;
@@ -272,7 +259,7 @@ body {
   top: 20%;
 }
 
-#cancel-button{
+#cancel-button {
   position: absolute;
   top: 15px;
   left: 13px;
@@ -282,9 +269,9 @@ body {
   cursor: pointer;
 }
 
-#modeling-button{
-  position:absolute;
-  background-color: #05ca33;;
+#modeling-button {
+  position: absolute;
+  background-color: #05ca33;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -295,24 +282,21 @@ body {
   bottom: 10px;
   right: 5px;
 }
-#modeling-button:hover{
-  background-color: #01791d;;
+#modeling-button:hover {
+  background-color: #01791d;
   border-color: #01791d;
-  
 }
 
 .dynamic-box-main input[type="file"] {
   display: none; /* 실제 파일 입력 요소를 숨깁니다 */
 }
 
-
 .dynamic-box-main.dragover {
   border-color: #000;
 }
 
-
 .upload-button {
-  background-color: #007bff;;
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -320,7 +304,7 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  position:absolute;
+  position: absolute;
   left: 130px;
   bottom: 13px;
 }
